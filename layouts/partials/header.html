@@ -1,0 +1,14 @@
+<a href="{{ "" | relURL }}" class="title">
+  <h2><img src="{{ "images/profile-pic.jpg" | relURL }}" alt="Picture of Aurora" class="profile-pic"> {{ .Site.Title }}</h2>
+  {{/*  <h3>BOO!</h3>  */}}
+</a>
+<nav>{{- partial "nav.html" . -}}</nav>
+
+
+<style>
+  .profile-pic {
+    width: 128px;
+    height: 128px;
+    clip-path: circle();
+  }
+</style>

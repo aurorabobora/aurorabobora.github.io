@@ -6,7 +6,7 @@ baseURL = 'https://aurorabobora.github.io/'
 theme = 'hugo-bearblog'
 
 # Basic metadata configuration for your blog.
-title = "My Portfolio!"
+title = "Aurora's Portfolio!"
 author = "Aurora Golden"
 copyright = "Copyright © 2025, Aurora Golden."
 languageCode = "en-US"
@@ -22,6 +22,9 @@ ignoreErrors = ["error-disable-taxonomy"]
   tags = "/blog/:slug"
 
 [params]
+  profilePicture = "images/profile-pic.jpg"
+  customCss = ["css/custom.css"]
+
   # The "description" of your website. This is used in the meta data of your generated html.
   description = "Hugo + Bear = :heart:"
 
@@ -47,7 +50,7 @@ ignoreErrors = ["error-disable-taxonomy"]
   # By default, if you want to read more than one blog post you have to always go
   # back to the /blog page.
   # By enabling this feature each blog post will have at the end a navigator
-  # enablePostNavigator = true
+  enablePostNavigator = true
 
   # By default, this theme displays dates with a format like "02 Jan, 2006", but
   # you can customize it by setting the `dateFormat` param in your site's config
@@ -59,6 +62,9 @@ ignoreErrors = ["error-disable-taxonomy"]
 # Configure markup highlighter to match "Bearblog" aesthetics, see
 # https://gohugo.io/configuration/markup/#highlight
 [markup]
+  [renderer]
+    unsafe = true
+
   [markup.highlight]
     style = 'friendly'
     lineNos = true
